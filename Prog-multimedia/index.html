@@ -1,66 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma position géographique</title>
+    <title>Document</title>
 </head>
 <body>
-
-    <h1>Ma position actuelle</h1>
-
-    <button onclick="getPosition()">Obtenir ma position</button>
-
-    <p id="latitude"></p>
-    <p id="longitude"></p>
-    <p id="precision"></p>
-    <p id="erreur"></p>
-
-    <script>
-        var options = {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0,
-        };
-
-        function success(pos) {
-            var crd = pos.coords;
-
-            console.log("Votre position actuelle est :");
-            console.log(`Latitude : ${crd.latitude}`);
-            console.log(`Longitude : ${crd.longitude}`);
-            console.log(`La précision est de ${crd.accuracy} mètres.`);
-
-            document.getElementById("latitude").textContent =
-                "Latitude : " + crd.latitude;
-
-            document.getElementById("longitude").textContent =
-                "Longitude : " + crd.longitude;
-
-            document.getElementById("precision").textContent =
-                "Précision : " + crd.accuracy + " mètres";
-        }
-
-        function error(err) {
-            console.warn(`ERREUR (${err.code}): ${err.message}`);
-
-            document.getElementById("erreur").textContent =
-                "Erreur : " + err.message;
-        }
-
-        function getPosition() {
-            if ("geolocation" in navigator) {
-                navigator.geolocation.getCurrentPosition(
-                    success,
-                    error,
-                    options
-                );
-            } else {
-                alert("La géolocalisation n'est pas prise en charge.");
-            }
-        }
-    </script>
-
+    <h1>Hello world</h1>
 </body>
 </html>
+
+
+        
